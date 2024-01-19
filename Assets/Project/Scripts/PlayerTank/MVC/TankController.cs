@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class TankController
 {
-    private TankModel tankModel;
-    private TankView tankView;
+    public TankModel tankModel { get; private set; }
+    public TankView tankView { get; private set; }
+    public Rigidbody rb { get; private set; }
+
+    private TankMovement tankMovement;
+
+    private Camera camera;
 
     public TankController(TankScriptableObject tankScriptableObject)
     {
@@ -11,11 +16,26 @@ public class TankController
         tankModel = new TankModel(tankScriptableObject);
         tankModel.SetTankController(this);
 
-        // Capture initial position
-        Vector3 initialPosition = tankScriptableObject.tankView.transform.position;
-
         // TankView
-        tankView = GameObject.Instantiate<TankView>(tankScriptableObject.tankView, initialPosition, Quaternion.identity);
+        tankView = GameObject.Instantiate<TankView>(tankScriptableObject.tankView);
         tankView.SetTankController(this);
+
+        // Other Initializations
+        camera = Camera.main;
+        camera.transform.parent = tankView.transform;
+        camera.transform.position = tankScriptableObject.tankCameraPosition;
+        camera.transform.rotation = Quaternion.Euler(tankScriptableObject.tankCameraRotation);
+        rb = tankView.GetRigidbody();
+        tankMovement = new TankMovement(this);
+    }
+
+    public void Move(float movement)
+    {
+        tankMovement.Move(movement);
+    }
+
+    public void Rotate(float rotation)
+    {
+        tankMovement.Rotate(rotation);
     }
 }

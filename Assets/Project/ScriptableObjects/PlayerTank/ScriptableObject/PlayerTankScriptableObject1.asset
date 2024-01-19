@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankView: {fileID: 5698432052948036335, guid: 060b4dcd771488242921b1773f820d01,
     type: 3}
+  tankCameraPosition: {x: 0, y: 10, z: -5}
+  tankCameraRotation: {x: 45, y: 0, z: 0}
+  tankSpeed: 100
+  rotationSpeed: 50
