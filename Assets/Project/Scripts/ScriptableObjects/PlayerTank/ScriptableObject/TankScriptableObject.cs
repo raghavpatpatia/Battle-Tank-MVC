@@ -3,9 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TankScriptableObject", menuName = "ScriptableObjects/Tank/TankScriptableObject")]
 public class TankScriptableObject : ScriptableObject
 {
+    public TankType tankType;
     public TankView tankView;
-    public Vector3 tankCameraPosition;
-    public Vector3 tankCameraRotation;
+    public Material tankMaterial;
     public float tankSpeed;
     public float rotationSpeed;
 }

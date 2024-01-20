@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7590e1b71e901e945a9b34683edef798, type: 3}
-  m_Name: PlayerTankScriptableObject1
+  m_Name: RedTankScriptableObject
   m_EditorClassIdentifier: 
+  tankType: 2
   tankView: {fileID: 5698432052948036335, guid: 060b4dcd771488242921b1773f820d01,
     type: 3}
-  tankCameraPosition: {x: 0, y: 10, z: -5}
-  tankCameraRotation: {x: 45, y: 0, z: 0}
-  tankSpeed: 100
-  rotationSpeed: 50
+  tankMaterial: {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}
+  tankSpeed: 250
+  rotationSpeed: 100

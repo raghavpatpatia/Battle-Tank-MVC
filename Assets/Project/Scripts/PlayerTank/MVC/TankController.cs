@@ -23,8 +23,6 @@ public class TankController
         // Other Initializations
         camera = Camera.main;
         camera.transform.parent = tankView.transform;
-        camera.transform.position = tankScriptableObject.tankCameraPosition;
-        camera.transform.rotation = Quaternion.Euler(tankScriptableObject.tankCameraRotation);
         rb = tankView.GetRigidbody();
         tankMovement = new TankMovement(this);
     }
@@ -37,5 +35,13 @@ public class TankController
     public void Rotate(float rotation)
     {
         tankMovement.Rotate(rotation);
+    }
+
+    public void ChangeTankMaterial()
+    {
+        foreach (MeshRenderer tankPart in tankView.tankParts)
+        {
+            tankPart.material = tankModel.tankMaterial;
+        }
     }
 }
