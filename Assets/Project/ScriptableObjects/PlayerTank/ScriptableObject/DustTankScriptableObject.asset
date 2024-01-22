@@ -15,6 +15,6 @@ MonoBehaviour:
   tankType: 3
   tankView: {fileID: 5698432052948036335, guid: 060b4dcd771488242921b1773f820d01,
     type: 3}
-  tankMaterial: {fileID: 2100000, guid: 424be3af6ad117140887d3e652a89d24, type: 2}
+  tankMaterial: {fileID: 2100000, guid: 8297fb96e260eca4c9a33c69642d5bb5, type: 2}
   tankSpeed: 350
   rotationSpeed: 120

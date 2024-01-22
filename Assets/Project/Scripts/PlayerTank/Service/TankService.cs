@@ -4,13 +4,21 @@ public class TankService : MonoBehaviour
 {
     [SerializeField] private TankScriptableObjectList tankScriptableObjectlist;
     private TankController tankController;
-    void Start()
+
+    private void Start()
     {
-        CreateTank();
+        CreateTank(Tank.Instance.tankType);
+        Debug.Log(Tank.Instance.tankType);
     }
 
-    private void CreateTank()
+    public void CreateTank(TankType tankType)
     {
-        this.tankController = new TankController(tankScriptableObjectlist.list[0]);
+        foreach (TankScriptableObject tankSO in tankScriptableObjectlist.list)
+        {
+            if (tankType == tankSO.tankType)
+            {
+                this.tankController = new TankController(tankSO);
+            }
+        }
     }
 }

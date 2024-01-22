@@ -91,6 +91,8 @@ MonoBehaviour:
   tankParts:
   - {fileID: 7260685943113605666}
   - {fileID: 7260685943113605664}
+  - {fileID: 7260685943113605668}
+  - {fileID: 7260685943113605674}
 --- !u!65 &3015743796446879535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,6 +150,18 @@ MeshRenderer:
 --- !u!23 &7260685943113605666 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2300000, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7260685943111580226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7260685943113605668 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300006, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7260685943111580226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7260685943113605674 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300008, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd,
     type: 3}
   m_PrefabInstance: {fileID: 7260685943111580226}
   m_PrefabAsset: {fileID: 0}

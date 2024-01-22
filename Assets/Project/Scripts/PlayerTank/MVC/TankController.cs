@@ -7,7 +7,7 @@ public class TankController
     public Rigidbody rb { get; private set; }
 
     private TankMovement tankMovement;
-
+    private TankColor tankColor;
     private Camera camera;
 
     public TankController(TankScriptableObject tankScriptableObject)
@@ -21,6 +21,8 @@ public class TankController
         tankView.SetTankController(this);
 
         // Other Initializations
+        tankColor = new TankColor(tankView);
+        ChangeTankMaterial();
         camera = Camera.main;
         camera.transform.parent = tankView.transform;
         rb = tankView.GetRigidbody();
@@ -37,11 +39,8 @@ public class TankController
         tankMovement.Rotate(rotation);
     }
 
-    public void ChangeTankMaterial()
+    private void ChangeTankMaterial()
     {
-        foreach (MeshRenderer tankPart in tankView.tankParts)
-        {
-            tankPart.material = tankModel.tankMaterial;
-        }
+        tankColor.ChangeColor(tankModel.tankMaterial);
     }
 }

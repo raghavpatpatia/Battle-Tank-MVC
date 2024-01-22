@@ -10,13 +10,12 @@ public class TankView : MonoBehaviour
     public List<MeshRenderer> tankParts;
     public void SetTankController(TankController tankController) => this.tankController = tankController;
     public Rigidbody GetRigidbody() => rb;
-    private void Start()
-    {
-        tankController.ChangeTankMaterial();
-    }
     private void Update()
     {
-        Movement();
+        if (tankController != null)
+        {
+            Movement();
+        }
     }
     private void Movement()
     {
