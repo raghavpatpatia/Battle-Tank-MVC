@@ -27,7 +27,6 @@ public class TankColorButtons : MonoBehaviour
     private void OnMouseClick()
     {
         Tank.Instance.tankType = tankSelection.tankType;
-        Debug.Log(Tank.Instance.tankType);
         tankColor.ChangeColor(tankSelection.tankMaterial);
     }
 }

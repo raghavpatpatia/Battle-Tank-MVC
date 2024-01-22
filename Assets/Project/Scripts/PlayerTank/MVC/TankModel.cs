@@ -7,6 +7,7 @@ public class TankModel
     public float rotationSpeed { get; private set;}
     public TankType tankType { get; private set;}
     public Material tankMaterial { get; private set;}
+    public BulletScriptableObject bullet { get; private set; }
     public void SetTankController(TankController tankController) => this.tankController = tankController;
     public TankModel(TankScriptableObject tankScriptableObject)
     {
@@ -14,5 +15,6 @@ public class TankModel
         this.rotationSpeed = tankScriptableObject.rotationSpeed;
         this.tankMaterial = tankScriptableObject.tankMaterial;
         this.tankType = tankScriptableObject.tankType;
+        this.bullet = tankScriptableObject.bullet;
     }
 }

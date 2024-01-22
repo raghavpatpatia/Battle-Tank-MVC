@@ -8,7 +8,6 @@ public class TankService : MonoBehaviour
     private void Start()
     {
         CreateTank(Tank.Instance.tankType);
-        Debug.Log(Tank.Instance.tankType);
     }
 
     public void CreateTank(TankType tankType)

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RedTankScriptableObject
   m_EditorClassIdentifier: 
   tankType: 2
+  bullet: {fileID: 11400000, guid: 593c0a82cdfde8c4b8535519c0c37ed9, type: 2}
   tankView: {fileID: 5698432052948036335, guid: 060b4dcd771488242921b1773f820d01,
     type: 3}
   tankMaterial: {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}

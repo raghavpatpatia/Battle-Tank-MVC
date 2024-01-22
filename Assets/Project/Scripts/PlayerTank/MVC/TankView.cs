@@ -5,6 +5,7 @@ public class TankView : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     public TankController tankController {get; private set;}
+    [SerializeField] private Transform bulletSpawnPoint;
     private float movement;
     private float rotate;
     public List<MeshRenderer> tankParts;
@@ -15,6 +16,10 @@ public class TankView : MonoBehaviour
         if (tankController != null)
         {
             Movement();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                tankController.ShootBullet(bulletSpawnPoint);
+            }
         }
     }
     private void Movement()

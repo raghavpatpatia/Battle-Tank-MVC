@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DustTankScriptableObject
   m_EditorClassIdentifier: 
   tankType: 3
+  bullet: {fileID: 11400000, guid: 1eb34abb64d57e54bacc66c1753f384c, type: 2}
   tankView: {fileID: 5698432052948036335, guid: 060b4dcd771488242921b1773f820d01,
     type: 3}
   tankMaterial: {fileID: 2100000, guid: 8297fb96e260eca4c9a33c69642d5bb5, type: 2}

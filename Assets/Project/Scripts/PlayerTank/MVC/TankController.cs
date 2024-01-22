@@ -43,4 +43,9 @@ public class TankController
     {
         tankColor.ChangeColor(tankModel.tankMaterial);
     }
+
+    public void ShootBullet(Transform bulletSpawnPoint)
+    {
+        BulletController bullet = new BulletController(tankModel.bullet, bulletSpawnPoint);
+    }
 }

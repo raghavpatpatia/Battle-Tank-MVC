@@ -4,6 +4,7 @@ using UnityEngine;
 public class TankScriptableObject : ScriptableObject
 {
     public TankType tankType;
+    public BulletScriptableObject bullet;
     public TankView tankView;
     public Material tankMaterial;
     public float tankSpeed;

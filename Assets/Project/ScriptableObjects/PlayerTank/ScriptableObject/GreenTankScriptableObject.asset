@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GreenTankScriptableObject
   m_EditorClassIdentifier: 
   tankType: 0
+  bullet: {fileID: 11400000, guid: 1c4fca49363d2754b9e82281d25683ab, type: 2}
   tankView: {fileID: 5698432052948036335, guid: 060b4dcd771488242921b1773f820d01,
     type: 3}
   tankMaterial: {fileID: 2100000, guid: b4d1e2e592cd5ed459329dc52de6b865, type: 2}
