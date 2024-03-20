@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2362888222406822486}
   bulletParticleSystem: {fileID: 1097568983260170353}
+  explosionParticleSystem: {fileID: 0}
 --- !u!54 &2362888222406822486
 Rigidbody:
   m_ObjectHideFlags: 0

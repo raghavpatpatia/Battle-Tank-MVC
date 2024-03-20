@@ -1,11 +1,9 @@
-﻿using System.Drawing;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BulletController
 {
     public BulletModel bulletModel { get; private set; }
     public BulletView bulletView { get; private set; }
-
     public BulletController(BulletScriptableObject bulletSO, Transform bulletSpawnPoint)
     {
         bulletModel = new BulletModel(bulletSO);
@@ -28,6 +26,7 @@ public class BulletController
 
     public void OnCollision(Collision collision)
     {
+        ParticleSystems.Instance.PlayParticles(bulletView.transform, ParticleTypes.Explosion);
         GameObject.Destroy(bulletView.gameObject);
     }
 }
